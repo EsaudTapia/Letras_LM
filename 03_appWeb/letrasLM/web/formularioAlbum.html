@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<div class="container-fluid">
+
+                       
+    <div id="divContenido" class=""> 
+        <div class="container-fluid">
+            <div class="row mt-3 mb-3">
+                <div class="col-sm-6">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title float-left mr-5"> Busquedas de Cantantes</h4>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title float-left mr-5">Cantante</h4>
+                                <div class="btn-group float-left">
+                                    <div class="card-pt-2 pl-2" style="border-color: #533f03"></div>
+                                    <input id="txtBCantante" type="text" class="" placeholder="Buscar por Nombre"/>
+                                    <button id="btnBCantante" class="btn btn-sm btn-outline-dark mr-5" onclick="buscarCantantesAlbum();"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">                                           
+                                    <thead>
+                                        <tr>
+                                            <td>#</td>
+                                            <td>Nombre</td>
+                                            <td>Fecha Nacimiento</td>
+                                            <td>foto</td>
+                                            <td></td>
+                                        </tr>
+                                    </thead>                                            
+                                    <tbody id="tbodyCantanteBus"></tbody>
+                                </table>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-sm-6 border-4">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title float-left mr-5">Informacion del album </h4>
+                        </div>
+                    </div>
+
+                    <div class="container row">
+                        <div class="col-6">
+                            <div class="card-body">
+                                <label for="txtCantanteElegido" >Cantante:</label>
+                                <div class="input-group">
+                                    <input type="text" id="txtCantanteElegidoAlbumNuevo" readonly>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <label for="txtClienteElegido" >Nombre del album:</label>
+                                <div class="input-group">
+                                    <input type="text" id="txtNombreAlbumNuevo" >
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label class="text-dark" for="txtContrasenia">Genero:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text "><i class="fas fa-guitar"></i></span>
+                                        <select id="selectgeneroAlbumNuevo" class="form-inline">
+                                            <option value="POP">POP</option>
+                                            <option value="ROCK">ROCK</option>
+                                            <option value="JAZZ">JAZZ</option>
+                                            <option value="SAlSA">SAlSA</option>
+                                            <option value="FUNK">FUNK</option>
+                                            <option value="ELECTTRONICA">ELECTTRONICA</option>
+                                            <option value="Indie Rock">Indie Rock</option>
+                                        </select>                            
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <label for="txtPrecioAlbumNuevo" >Precio:</label>
+                                <div class="input-group">
+                                    <input type="number" id="txtPrecioAlbumNuevo" >
+                                </div>
+                            </div>
+
+                            <div class="form-group ">
+                                <label class="text-dark " for="txtFechaAlbumNuevo">Fecha de Publicacion</label>
+                                <div class="input-group ">
+                                    <span class="input-group-text "><i class="fas fa-calendar-alt"></i></span>
+                                    <input id="txtFecha_nacAlbumNuevo" type="date" class="form-control" onchange="obtenerFecha(this)" required/>
+                                </div>                                           
+                            </div>  
+
+                            <div class="card-body">
+                                <label for="txtClienteElegido" >Discografia:</label>
+                                <div class="input-group">
+                                    <input type="text" id="txtDiscografiaAlbumNuevo" >
+                                </div>
+                            </div>
+                            <div class="card-body" >
+                                <button onclick="obtenerTotal();" class="btn btn-success mx-4"><i class="fa fa-calculator"></i></button>
+                                <button onclick="guardarAlbum();" class="btn btn-success mx-4"><i class="fa fa-save"></i></button>        
+                            </div>
+                        </div>
+                        <div id='imgcantante' class="col-6">
+                            <div class="d-flex justify-content-center">
+                                <div class="btn btn-mdb-color btn-rounded float-left">
+                                    <label>Seleccione imagen del producto:</label>
+                                    <div class=" " > 
+                                        <div  class="card ">
+                                            <div class="card border-dark">
+
+                                                <div  class="card-header  bg-success text-white">                            
+                                                    <h4 id="pasos" class="text-center" >Imagen del producto </h4>                              
+                                                </div>
+                                                <div id="dtscliente" class="card-body">
+                                                    <span id="descImg">
+                                                        sin imagen
+                                                        <br>
+                                                        <i class="fas fa-image"></i>
+                                                    </span>
+                                                    <img id="espacioimg" style="width: 100%;"/>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <input id="fileImage"
+                                           type="file" 
+                                           accept="image/png"
+                                           onchange="cargarFotografia(this);"/>
+                                    <input id="txtBase64" type="text" class="form-control" hidden >
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+

@@ -1,0 +1,102 @@
+
+<div class="container row">
+<div id="detalleForm" class="card-body col-6">
+    <div class="form">
+
+        <div class="form">            
+            <div class="form-group">
+
+                <div class="form-group">
+                    <label class="text-dark" for="txtNombre">Nombre(s)</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text "><i class="fas fa-user"></i></span>
+                        </div>
+                        <input id="txtnombre" type="text" class="form-control" required/>
+                    </div>                                          
+                </div>
+                <div class="form-group">
+                    <label class="text-dark" for="txtApellidoP">Apellido Paterno</label>
+                    <input id="txtappellido_pat" type="text" class="form-control" required/>
+                </div>
+                <div class="form-group">
+                    <label class="text-dark" for="txtApellidoM">Apellido Materno</label>                                        
+                    <input id="txtappellido_mat" type="text" class="form-control" required/>
+                </div>
+
+                <div class="form-group">
+                    <label class="text-dark" for="txtFechaNac">Fecha de nacimiento</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text "><i class="fas fa-calendar-alt"></i></span>
+                        </div>
+                        <input id="txtFecha_nac" type="date" class="form-control" onchange="obtenerFecha(this)" required/>
+                    </div>                                           
+                </div>                                                                                                           
+                <div class="form-group">
+                    <label class="text-dark" for="txtCorreo">Nacionalidad</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text "><i class="fas fa-envelope"></i></span>
+                        </div>
+                        <input id="txtNacionalidad" type="text" class="form-control" required/>
+                    </div>  
+                </div>
+                <div class="form-group">
+                    <label class="text-dark" for="txtContrasenia">Sexo</label>
+                    <div class="input-group">
+                        <span class="input-group-text "><i class="fas fa-lock"></i></span>
+                        <select id="selectSexo" class="form-inline">
+                            <option value="Hombre">Hombre</option>
+                            <option value="Mujer">Mujer</option>
+                            <option value="Otro">Otro</option>
+                        </select>                            
+                    </div>
+                </div> 
+
+                <input type="submit" hidden/>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <a href="formularioCantante.html"></a>
+            <button id="btnAddCliente" type="button" class="btn btn-primary" data-dismiss="modal" onclick="confirmarNuevoCliente();">Guardar</button>
+            <span id="contDinamico"></span>
+        </div>
+    </div>
+</div>
+<div id='imgcantante' class="col-6">
+    <div class="d-flex justify-content-center">
+        <div class="btn btn-mdb-color btn-rounded float-left">
+            <label>Seleccione imagen del producto:</label>
+            <div class=" " > 
+                <div  class="card ">
+                    <div class="card border-dark">
+
+                        <div  class="card-header  bg-success text-white">                            
+                            <h4 id="pasos" class="text-center" >Imagen del producto </h4>                              
+                        </div>
+                        <div id="dtscliente" class="card-body">
+                            <span id="descImg">
+                                sin imagen
+                                <br>
+                                <i class="fas fa-image"></i>
+                            </span>
+                            <img id="espacioimg" style="width: 100%;"/>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <br>
+            <input id="fileImage"
+                   type="file" 
+                   accept="image/png"
+                   onchange="cargarFotografia(this);"/>
+            <input id="txtBase64" type="text" class="form-control" hidden >
+        </div>
+    </div>
+
+</div>
+    
+    </div>

@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>LetrasLM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="style/media/img/pag.png" type="image/png" sizes="16x16">
+        <link rel="stylesheet" href="style/bootstrap5.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style/css/fontawesome-free-5.15.2-web/css/all.min.css">
+        <link rel="stylesheet" href="style/css/estilo.css"> 
+         <link rel="stylesheet" href="style/sweetalert2/sweetalert2.min.css">
+    </head>
+    <body onload="mostrarAlbum();">
+        <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
+            <div class="container-fluid">
+                <p class="h2 text-white font-weight-bold px-2 ">LetrasLM</p>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <form class="d-flex">
+                        <input id="txtsearchCantante" class="form-control  campoBuscar px-md-3  " type="search" placeholder="buscar Cantante" >
+                        <button id="btnSearchCantante" class="btn btn-success ms-2 bg-dark " onclick="buscarCantantes();" type="button"><i class="fas fa-search"></i></button>
+
+                    </form>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">                                                
+                        <li class="nav-item">                          
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            
+                        </li>
+                        <li class="nav-item dropdown">
+                             <button id="btnSearchCantante"  class="btn btn-success ms-2 bg-primary "  onclick="location.href='añadirCantante.html'" type="button">Añadir Cantante</button>                            
+                        </li>
+                        <li class="nav-item">
+                           <button id="btnSearchCantante"  class="btn btn-success ms-2 bg-primary "  onclick="location.href='añadirAlbum.html'" type="button">Añadir Album</button>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+
+            <div class="jumbotron p-3 m-0">                                               
+                <h3 id="tituloScreen"  class="card-text text-center text-primary"> Canciones</h3>
+            </div>                    
+            <div id="divContenido" class=""> 
+                <div class="container-fluid">
+                    <div class="row mt-3 mb-3">
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title float-left mr-5">canciones</h4>
+                                    
+                                    <div class="btn-group float-right">                                                                             
+                                        <button id="btnAdd" class="btn btn-success" onclick="mostrarformularioCancion();" ><i class="fa fa-plus"></i> Agregar</button>
+                                        <button  class="btn btn-primary" onclick="imprimir('tblCliente');"><i class="fa fa-sync-alt fa-spin"></i> Imprimir</button>
+                                    </div>
+                                </div>
+                                <div id="tblCliente" class="card-body p-0 m-0">
+                                    <table class="table table-hover table-responsive m-0">
+                                        <thead class="bg-dark text-light">
+                                            <tr>
+                                                <th scope="col">IdAlbum </th>
+                                                <th scope="col">Nombre(s)</th>
+                                                <th scope="col">Genero</th>
+                                                <th scope="col">Precio</th>                              
+                                                <th scope="col">Fecha de Publicacion</th>                               
+                                                <th scope="col">Discografica</th>
+                                                <th scope="col">Cantante</th>                                                                                                                        
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tbodyDtAlbum" class="bg-white">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+                
+
+        <footer class="bd-footer p-3 p-md-5 mt-5 bg-dark  ">
+            <div class="container text-white">                                
+                <p class="h3">LetrasML</p>
+                <p>© 2017-2018 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="style/bootstrap5.0.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="style/js/jquery/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="style/js/cantante.js"></script>
+        <script type="text/javascript" src="style/js/album.js"></script>
+        <script type="text/javascript" src="style/js/cancion.js"></script>
+        <script type="text/javascript" src="style/sweetalert2/sweetalert2.min.js"></script>
+
+    </body>
+
+</html>
+

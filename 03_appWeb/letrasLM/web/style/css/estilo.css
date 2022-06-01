@@ -1,0 +1,24 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11/03/2021, 02:15:58 PM
+    Author     : PC
+*/
+
+.campoBuscar {
+    font-family:Verdana,Helvetica;
+    font-size:12pt;
+    width: 500px;
+    color:#696969;
+    padding: 5px 7px 5px 7px;
+    border:1px solid black;
+    background:#FFF;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 15px;
+}
+
+

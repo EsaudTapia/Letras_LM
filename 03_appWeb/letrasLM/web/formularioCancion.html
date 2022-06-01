@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<div class="container-fluid">
+
+
+    <div id="divContenido" class=""> 
+        <div class="container-fluid">
+            <div class="row mt-3 mb-3">
+                <div class="col-sm-6">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title float-left mr-5"> Busquedas de Album</h4>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title float-left mr-5">Album</h4>
+                                <div class="btn-group float-left">
+                                    <div class="card-pt-2 pl-2" style="border-color: #533f03"></div>
+                                    <input id="txtBAlbumcanc" type="text" class="" placeholder="Buscar por Nombre"/>
+                                    <button id="btnBAlbumcanc" class="btn btn-sm btn-outline-dark mr-5" onclick="buscarCancionAlbum();"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">                                           
+                                    <thead>
+                                        <tr>
+                                            <td>#</td>
+                                            <td>Nombre</td>
+                                            <td>Fecha Publicacion</td>
+                                            <td>foto</td>
+                                            <td></td>
+                                        </tr>
+                                    </thead>                                            
+                                    <tbody id="tbodyAlbumBuscanc"></tbody>
+                                </table>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="card mt-3">
+                        
+                    </div>
+
+                    <div class="container row">
+                        <div class="col-6">
+                            
+
+                           
+                            <div class="card-body" >
+                                
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-6 border-4">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title float-left mr-5">Canciones </h4>
+                        </div>
+                    </div>
+
+                    <div class="container row">
+                        <div class="col-6">
+                            <div class="card-body">
+                                <label for="txtAlbumElegido" >Album:</label>
+                                <div class="input-group">
+                                    <input type="text" id="txtElegidoAlbumNuevo" readonly>
+                                </div>
+                                 <div class="card-body">
+                                <label for="txtClienteElegido" >Nombre de la cancion:</label>
+                                <div class="input-group">
+                                    <input type="text" id="txtNombreCancionNueva" >
+                                </div>
+                            </div>
+
+
+
+                            <div class="card-body">
+                                <label for="txtPrecioAlbumNuevo" >letra:</label>
+                                <textarea id="txtletra" name="w3review" rows="4" cols="50"></textarea>
+                            </div>
+
+                            <div class="card-body">
+                                <label for="txtClienteElegido" >Duracion</label>
+                                <div class="input-group">
+                                    <input type="time" id="txtDuracionnu" >
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <label for="txtClienteElegido" >Link:</label>
+                                <div class="input-group">
+                                    <input type="text" id="txtDLinkNuevo" >
+                                </div>
+                            </div>
+                            </div>
+
+                            <div id="divCancionesemb"  class="card-body">
+                                
+                            </div>                          
+                            <div class="card-body" >                               
+                                <button onclick="añadirCancion();" class="btn btn-success mx-4"><i class="fa fa-save"></i></button>        
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
